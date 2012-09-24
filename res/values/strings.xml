@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Battery Monitoring Wallpapers</string>
+    <string name="app_version">0.5</string>
+    <string name="app_creator">HokieGeek</string>
+    <string name="service_label">Battery Monitoring Wallpapers</string>
+    <string name="description">A set of wallpapers with areas that react to the battery level</string>
+    
+    <!-- SETTINGS -->
+    <string name="settings">Settings</string>
+    
+    <!-- Themes -->
+    <string name="settings_themes_title">Themes</string>
+    <string name="settings_themes_summary">Choose a theme</string>
+    <string name="themes_list_key">theme_settings_list</string>
+      
+    <!-- Battery -->
+    <string name="settings_battery_title">Battery Options</string>
+    <string name="settings_battery_summary">Access options for battery profiles</string>
+    <!-- 
+    	Choose profile
+     -->
+    
+    <!-- General -->
+    <string name="settings_general_title">General</string>
+    <string name="general_charging_indicator_key">general_charging_indicator</string>
+    <string name="general_charging_indicator_title">Charging indicator</string>
+    <string name="general_charging_indicator_summary">Throb the image when the phone is charging</string>
+    <string name="general_show_remaining_key">general_display_remaining</string>
+    <string name="general_show_remaining_title">Display remaining</string>
+    <string name="general_show_remaining_summary">Display the remaining battery life</string>
+    
+    <string name="general_remaining_options_key">general_remaining_options</string>
+    <string name="general_remaining_options_title">Remaining display options</string>
+    <string name="general_remaining_options_summary">Configure how and when to display remaining battery life</string>
+    
+    <string name="general_remaining_type_key">general_remaining_type</string>
+    <string name="general_remaining_type_title">Remaining text type</string>
+    <string name="general_remaining_type_summary">Choose type of information to display as remaining life</string>
+    <string-array name="general_remaining_type">
+        <item>"Percent"</item>
+        <item>"Time when dead"</item>
+    </string-array>
+    <string-array name="general_remaining_type_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    
+</resources>

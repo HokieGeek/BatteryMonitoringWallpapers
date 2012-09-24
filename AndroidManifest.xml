@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.hokiegeek.android.wallpaper.live.BatteryMonitoring">
+
+    <uses-sdk android:minSdkVersion="8" />
+    <uses-feature android:name="android.software.live_wallpaper" />
+
+    <uses-feature android:name="android.software.live_wallpaper" />
+
+    <application android:label="@string/service_label" 
+        		 android:icon="@drawable/icon">
+
+        <service android:name=".BatteryMonitoringWallpaper"
+        		 android:enabled="true"
+        		 android:icon="@drawable/icon"
+        		 android:label="@string/service_label"
+            	 android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data android:name="android.service.wallpaper" 
+            		   android:resource="@xml/wallpapers" />
+        </service>
+        <activity
+            android:label="@string/settings"
+            android:name=".settings.SettingsMain"
+            android:exported="true">
+        </activity>
+    </application>
+</manifest>
