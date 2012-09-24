@@ -88,11 +88,11 @@ public class SettingsMain extends PreferenceActivity
 		CharSequence[] themeIds = null;
 		Theme[] themes = ThemeManager.getInstance().getThemes();
 		if (themes != null && themes.length > 0) {
-			Log.d("[HG] createThemesPreference", "num themes found: "+themes.length);
+			Log.v("[HG] BatteryMonitoringWallpapers", "createThemesPreference: num themes found: "+themes.length);
 			themeNames = new CharSequence[themes.length];
 			themeIds = new CharSequence[themes.length];
 			for (int i = themes.length-1; i >= 0; i--) {
-				Log.d("[HG] createThemesPreference", " Theme["+i+"]: "+themes[i]);
+				Log.v("[HG] BatteryMonitoringWallpapers", "createThemesPreference: Theme["+i+"]: "+themes[i]);
 				themeNames[i] = themes[i].getName();
 				themeIds[i] = themes[i].getId().toString();
 			}

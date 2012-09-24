@@ -32,7 +32,7 @@ public class ChargingThrobber extends ChargingIndicator {
     	
     	public void run() {
     		try {
-    			Log.d("[HG] ThrobbingPause.run", "length = "+pauseLength);
+    			Log.v("[HG] BatteryMonitoringWallpapers", "ThrobbingPause.run: length = "+pauseLength);
 				sleep(pauseLength);
 				throbbingPaused = false;
 			} catch (InterruptedException e) {

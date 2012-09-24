@@ -148,7 +148,7 @@ public class BatteryMonitoringWallpaper extends WallpaperService {
         //
 		private void postDraw(long delay) {
 			if (mVisible) {
-				Log.d("[HG] BatteryMonitoringWallpaperEngine", "   Updating indicator");
+				Log.v("[HG] BatteryMonitoringWallpapers", "BatteryMonitoringWallpaperEngine:   Updating indicator");
 				mHandler.postDelayed(mDraw, delay);
 			}
 		}
@@ -169,7 +169,7 @@ public class BatteryMonitoringWallpaper extends WallpaperService {
                 	if (background != null) {
                 		background.draw(c);
                 	} else {
-                		Log.d("[HG] BatteryMonitoringWallpaper.drawFrame", "No background object!");
+                		Log.v("[HG] BatteryMonitoringWallpapers", "BatteryMonitoringWallpaper.drawFrame: No background object!");
                 	}
                 	
                 	if (indicator != null) {
@@ -194,7 +194,7 @@ public class BatteryMonitoringWallpaper extends WallpaperService {
 
 		public void batteryStatusChange(BatteryStatus status) {
 			// TODO Auto-generated method stub
-			Log.d("[HG] BatteryMonitoringWallpaperEngine", "changed status: "+status);
+			Log.v("[HG] BatteryMonitoringWallpapers", "BatteryMonitoringWallpaperEngine: changed status: "+status);
 			switch (status) {
 			case CHANGED: 
 				// New battery level
@@ -224,7 +224,7 @@ public class BatteryMonitoringWallpaper extends WallpaperService {
 		}
 		
 		public void onSharedPreferenceChanged(SharedPreferences p, String key) {
-			Log.d("[HG] BMW.onSharedPreferenceChanged", "key = "+key);
+			Log.v("[HG] BatteryMonitoringWallpapers", "BMW.onSharedPreferenceChanged: key = "+key);
 			if (prefs.getResourceString(R.string.themes_list_key).equals(key)) {
 				themes.setTheme(prefs.getTheme());
 				createBitmaps();

@@ -26,7 +26,7 @@ public class BatteryProfilesManager {
 		@Override
 		public void onReceive(Context arg0, Intent intent) {
 			// TODO: SWITCH ON INTENT TYPE: intent.getAction();?
-			Log.d("[HG] BatteryProfilesManager", intent.getAction());
+			Log.v("[HG] BatteryMonitoringWallpapers", "BatteryProfilesManager: "+intent.getAction());
 			if (intent.getAction().equals(Intent.ACTION_BATTERY_CHANGED)) {
 				int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
 				if (level > -1)

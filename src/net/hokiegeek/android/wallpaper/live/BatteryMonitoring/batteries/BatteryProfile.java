@@ -31,12 +31,12 @@ public class BatteryProfile {
 	
 	public void setLevel(float l) {
 		level = l;
-		Log.d("[HG] BatteryProfile", "level = "+this.level);
+		Log.v("[HG] BatteryMonitoringWallpapers", "BatteryProfile: level = "+this.level);
 	}
 
 	public void setStatus(BatteryStatus s) {
 		status = s;
-		Log.d("[HG] BatteryProfile", "status = "+status);
+		Log.v("[HG] BatteryMonitoringWallpapers", "BatteryProfile: status = "+status);
 	}
 
 	public BatteryStatus getStatus() {

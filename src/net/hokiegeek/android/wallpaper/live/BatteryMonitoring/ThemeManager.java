@@ -14,7 +14,7 @@ public class ThemeManager { //extends Activity {
 	private Integer currentTheme = -1;
 	
 	private ThemeManager() {
-		Log.d("[HG] ThemeManager", "init");
+		Log.v("[HG] BatteryMonitoringWallpapers", "ThemeManager: init");
 		currentTheme = 0;
 		
 		loadThemes();
@@ -38,7 +38,7 @@ public class ThemeManager { //extends Activity {
 	
 	public Theme[] getThemes() {
 		if (themes == null) return null;
-		Log.d("[HG] getThemes", "Num themes: "+themes.size());
+		Log.v("[HG] BatteryMonitoringWallpapers", "getThemes: Num themes: "+themes.size());
 //		return (Theme[])themes.entrySet().toArray(new Theme[themes.size()]); FIXME
 		
 		Theme[] ta = new Theme[themes.size()];
@@ -91,6 +91,6 @@ public class ThemeManager { //extends Activity {
 	public void setTheme(Integer theme) {
 		if (theme < 0 || theme >= themes.size()) return;
 		currentTheme = theme;
-		Log.d("[HG] ThemeManager", "currentTheme = "+currentTheme);
+		Log.v("[HG] BatteryMonitoringWallpapers", "ThemeManager: currentTheme = "+currentTheme);
 	}
 }
